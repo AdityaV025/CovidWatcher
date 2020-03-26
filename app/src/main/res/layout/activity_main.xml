@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@color/colorPrimaryDark">
+
+    <LinearLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:layout_margin="12dp">
+
+        <AutoCompleteTextView
+            android:id="@+id/getCountry"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/background_shape"
+            android:padding="8dp"
+            android:hint="Enter Your Country"
+            android:textColorHint="#a0aec0"
+            android:textColor="#FFF"
+            android:textCursorDrawable="@null"
+            android:textSize="25sp"
+            android:fontFamily="@font/raleway_medium"/>
+
+        <Button
+            android:id="@+id/getDatabtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go"
+            android:textSize="25sp"
+            android:background="@drawable/background_shape"
+            android:textColor="#FFF"
+            android:layout_marginStart="5dp"
+            android:fontFamily="@font/raleway_medium"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/newCases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/container"
+        android:layout_marginTop="50dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#E53E3E"
+        android:textSize="40sp"
+        android:text="0"
+        android:fontFamily="@font/raleway_bold"/>
+
+    <TextView
+        android:id="@+id/textCase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newCases"
+        android:textColor="#FFF"
+        android:textSize="25sp"
+        android:text="New Cases Today"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/raleway_medium"/>
+
+    <TextView
+        android:id="@+id/totCases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textCase"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="#E53E3E"
+        android:textSize="40sp"
+        android:text="0"
+        android:fontFamily="@font/raleway_bold"/>
+
+    <TextView
+        android:id="@+id/textTotCases"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/totCases"
+        android:textColor="#FFF"
+        android:textSize="25sp"
+        android:text="Total Cases"
+        android:layout_centerHorizontal="true"
+        android:fontFamily="@font/raleway_medium"/>
+
+    <TextView
+        android:id="@+id/deaths"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_below="@id/textTotCases"
+        android:layout_marginTop="40dp"
+        android:textColor="#E53E3E"
+        android:layout_centerInParent="true"
+        android:textSize="40sp"
+        android:fontFamily="@font/raleway_bold"/>
+
+    <TextView
+        android:id="@+id/labelDeath"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Deaths"
+        android:layout_centerInParent="true"
+        android:textColor="#FFF"
+        android:layout_below="@id/deaths"
+        android:textSize="25sp"
+        android:fontFamily="@font/raleway_medium"/>
+
+    <TextView
+        android:id="@+id/recovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:layout_below="@id/labelDeath"
+        android:layout_marginTop="40dp"
+        android:textSize="40sp"
+        android:textColor="#38A169"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/raleway_bold"/>
+
+    <TextView
+        android:id="@+id/labelRecovered"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Recovered"
+        android:textSize="25sp"
+        android:layout_below="@id/recovered"
+        android:textColor="#FFF"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/raleway_medium"/>
+
+    <Button
+        android:id="@+id/hospitalBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/background_shape"
+        android:text="Coronavirus Hospitals in India"
+        android:textColor="#FFF"
+        android:fontFamily="@font/raleway_medium"
+        android:textAllCaps="false"
+        android:textSize="20sp"/>
+
+</RelativeLayout>
