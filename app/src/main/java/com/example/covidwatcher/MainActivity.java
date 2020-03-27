@@ -33,7 +33,7 @@ import org.json.JSONObject;
 public class MainActivity extends AppCompatActivity {
 
     private TextView mNewCases;
-    private Button mGetDatabtn,mHospitalBtn;
+    private Button mGetDatabtn,mHospitalBtn,mSafeBtn;
     private RequestQueue requestQueue;
     String CountryName;
     private AutoCompleteTextView mGetCountry;
@@ -60,6 +60,7 @@ public class MainActivity extends AppCompatActivity {
         mRecovered = (TextView) findViewById(R.id.recovered);
         mLabelRecovered = (TextView) findViewById(R.id.labelRecovered);
         mHospitalBtn = (Button) findViewById(R.id.hospitalBtn);
+        mSafeBtn = (Button) findViewById(R.id.safeBtn);
 
         int fire = 0x1F525;
         String emoji = getFireEmoji(fire);
@@ -133,6 +134,16 @@ public class MainActivity extends AppCompatActivity {
                 Intent intent = new Intent(getApplicationContext() , HospitalActivity.class);
                 startActivity(intent);
                 Toast.makeText(getApplicationContext() , "Click on a Card" , Toast.LENGTH_LONG).show();
+            }
+        });
+
+        mSafeBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent = new Intent(getApplicationContext(), SafeActivity.class);
+                startActivity(intent);
+
             }
         });
 
