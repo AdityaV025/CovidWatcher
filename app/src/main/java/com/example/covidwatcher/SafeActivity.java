@@ -11,8 +11,7 @@ public class SafeActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_safe);
-
-        WebView wv = (WebView) findViewById(R.id.webview);
+        WebView wv = findViewById(R.id.webview);
         wv.loadUrl("https://www.cdc.gov/coronavirus/2019-ncov/prepare/prevention.html");
 
     }
